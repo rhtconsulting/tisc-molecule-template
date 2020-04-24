@@ -1,0 +1,24 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: ec2
+lint:
+  name: yamllint
+platforms:
+  - name: {{ cookiecutter.ec2_name }}
+    image: ami-a1d349c0
+    instance_type: {{ cookiecutter.ec2_type }}
+    count: {{ cookiecutter.ec2_count }}
+    vpc_subnet_id: {{ cookiecutter.subnet_id }}
+    Type: {{ cookiecutter.tag_type}}
+    Function: {{ cookiecutter.tag_function }}
+    Zone: {{ cookiecutter.tag_zone }}
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+verifier:
+  name: testinfra
+  lint:
+    name: flake8
