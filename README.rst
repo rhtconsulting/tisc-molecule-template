@@ -1,12 +1,12 @@
 molecule-template
 =====================
 
-A Molecule cookiecutter template_.
+A Molecule cookiecutter template.
 
 Molecule provides a native cookiecutter interface, so developers can
 provide their own templates.
 
-.. _cookiecutter: https://github.com/audreyr/cookiecutter
+cookiecutter: https://github.com/audreyr/cookiecutter
 
 How to use
 =====================
